@@ -19,5 +19,5 @@ steps:
         git clone https://devopseagle:f3747ed3928aaee589e6df9863636703a42d693b@github.com/devopseagle/Delphi-new.git .
         git add hiscox.zip
         git commit -m " Adding artifacts" hiscox.zip
-        git push 
+        
   displayName: 'Run a multi-line script'

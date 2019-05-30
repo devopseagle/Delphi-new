@@ -1,0 +1,23 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+        echo abc > ravi.txt
+        echo pqr > jaswant.txt
+        zip hiscox.zip *
+        mkdir hiscox && cp hiscox.zip hiscox/
+        cd hiscox
+        git clone https://devopseagle:f3747ed3928aaee589e6df9863636703a42d693b@github.com/devopseagle/Delphi-new.git .
+        git add hiscox.zip
+        git commit -m " Adding artifacts" hiscox.zip
+        git push 
+  displayName: 'Run a multi-line script'
